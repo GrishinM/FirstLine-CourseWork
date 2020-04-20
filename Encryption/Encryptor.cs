@@ -19,7 +19,7 @@ namespace Encryption
             get => key;
             set
             {
-                if (!value.All(c => alphabet.Contains(c)))
+                if (!value.ToLower().All(c => alphabet.Contains(c)))
                     throw new MyException("Невалидное значение ключа!");
                 key = value;
             }
@@ -33,9 +33,9 @@ namespace Encryption
             return f(path);
         }
 
-        public string EncryptText(string text)
+        public string EncryptText(string decryptedText)
         {
-            return VigenereCipher.Encrypt(text, Key);
+            return VigenereCipher.Encrypt(decryptedText, Key);
         }
 
         public string DecryptFile(string path)
@@ -44,9 +44,9 @@ namespace Encryption
             return f(path);
         }
 
-        public string DecryptText(string text)
+        public string DecryptText(string encryptedText)
         {
-            return VigenereCipher.Decrypt(text, Key);
+            return VigenereCipher.Decrypt(encryptedText, Key);
         }
 
         private string f(string path)

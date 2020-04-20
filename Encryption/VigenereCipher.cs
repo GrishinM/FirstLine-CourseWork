@@ -27,15 +27,14 @@ namespace Encryption
         private static string Crypt(string text, string key)
         {
             key = key.ToLower();
-            var keyText = new StringBuilder(text.Where(c => alphabet.Contains(c.ToString().ToLower().ToCharArray()[0])).ToList().Count);
+            var keyText = new StringBuilder(text.Where(c => alphabet.Contains(char.ToLower(c))).ToList().Count);
             for (var i = 0; i < keyText.Capacity; i++)
                 keyText.Append(key[i % key.Length]);
             var answer = new StringBuilder(text.Length);
             var j = 0;
             foreach (var c in text)
             {
-                var lower_c = c.ToString().ToLower().ToCharArray()[0];
-                var isUpper = c != lower_c;
+                var lower_c = char.ToLower(c);
                 if (!alphabet.Contains(lower_c))
                 {
                     answer.Append(c);
@@ -43,7 +42,7 @@ namespace Encryption
                 }
 
                 var newC = alphabet[index(lower_c, keyText[j++])];
-                answer.Append(isUpper ? newC.ToString().ToUpper() : newC.ToString().ToLower());
+                answer.Append(char.IsUpper(c) ? char.ToUpper(newC) : newC);
             }
 
             return answer.ToString();
