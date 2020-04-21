@@ -13,40 +13,31 @@ namespace WebApp {
     public partial class Result {
         
         /// <summary>
-        /// form1 control.
+        /// textarea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify, move the field declaration from the designer file to a code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea textarea;
         
         /// <summary>
-        /// textBox control.
+        /// filePath control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify, move the field declaration from the designer file to a code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textBox;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText filePath;
         
         /// <summary>
-        /// filePathBox control.
+        /// fileName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify, move the field declaration from the designer file to a code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox filePathBox;
-        
-        /// <summary>
-        /// fileNameBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fileNameBox;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fileName;
         
         /// <summary>
         /// Button1 control.
@@ -56,14 +47,5 @@ namespace WebApp {
         /// To modify, move the field declaration from the designer file to a code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
-        /// Button2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

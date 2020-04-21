@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -9,9 +8,6 @@ namespace Encryption
 {
     public class Encryptor
     {
-        private static readonly List<char> alphabet = new List<char>
-            {'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'};
-
         private string key;
 
         public string Key
@@ -19,7 +15,7 @@ namespace Encryption
             get => key;
             set
             {
-                if (!value.ToLower().All(c => alphabet.Contains(c)))
+                if (!value.ToLower().All(c => VigenereCipher.alphabet.Contains(c)))
                     throw new MyException("Невалидное значение ключа!");
                 key = value;
             }

@@ -6,26 +6,32 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Ввод данных</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-<form id="form1" runat="server" style="text-align: center">
-    <asp:FileUpload ID="fileUpload" runat="server" accept=".txt, .docx"/>
-    <br/>
-    <br/>
-    <asp:Label runat="server" style="font-size: 25px" Text="Или введите текст:"/>
-    <br/>
-    <br/>
-    <asp:TextBox ID="textBox" runat="server" Height="400" Width="800" TextMode="MultiLine" style="resize:none"/>
-    <br/>
-    <br/>
-    <asp:Label runat="server" Text="Введите ключ:"/>
-    <br/>
-    <br/>
-    <asp:TextBox ID="keyBox" runat="server" Width="200"/>
-    <br/>
-    <br/>
-    <asp:Button runat="server" Text="Зашифровать" OnClick="EncryptClick"/>
-    <asp:Button runat="server" Text="Расшифровать" OnClick="DecryptClick"/>
-</form>
+<div class="container">
+    <div class="form">
+        <form runat="server">
+            <div class="form__container">
+                <textarea ID="textarea" runat="server" placeholder="Введите текст..."/>
+                <div class="right">
+                    <div class="load">
+                        <asp:FileUpload ID="fileUpload" runat="server" accept=".txt, .docx"/>
+                    </div>
+                    <div class="key">
+                        <div class="inp">
+                            <span runat="server">Введите ключ:</span>
+                            <input class="input" ID="key" runat="server" type="text"/>
+                        </div>
+                        <div class="btns">
+                            <asp:Button runat="server" CssClass="button" Text="Зашифровать" OnClick="EncryptClick"/>
+                            <asp:Button runat="server" CssClass="button" Text="Расшифровать" OnClick="DecryptClick"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>

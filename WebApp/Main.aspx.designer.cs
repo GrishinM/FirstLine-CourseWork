@@ -13,13 +13,13 @@ namespace WebApp {
     public partial class Main {
         
         /// <summary>
-        /// form1 control.
+        /// textarea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify, move the field declaration from the designer file to a code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea textarea;
         
         /// <summary>
         /// fileUpload control.
@@ -31,21 +31,12 @@ namespace WebApp {
         protected global::System.Web.UI.WebControls.FileUpload fileUpload;
         
         /// <summary>
-        /// textBox control.
+        /// key control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify, move the field declaration from the designer file to a code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textBox;
-        
-        /// <summary>
-        /// keyBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox keyBox;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText key;
     }
 }

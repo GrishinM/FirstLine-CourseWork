@@ -6,31 +6,31 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Результат</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-<form id="form1" runat="server" style="text-align: center">
-    <asp:Label runat="server" style="font-size: 30px" Text="Результат:"/>
-    <br/>
-    <br/>
-    <asp:TextBox ID="textBox" runat="server" Height="400" Width="800" TextMode="MultiLine" BackColor="White" Enabled="False" Style="resize:none" Text="<% # WebApp.Main.text %>"/>
-    <br/>
-    <br/>
-    <asp:Label runat="server" Text="Введите имя директории для сохранения:"/>
-    <br/>
-    <br/>
-    <asp:TextBox ID="filePathBox" runat="server" Width="500"/>
-    <br/>
-    <br/>
-    <asp:Label runat="server" Text="Введите имя файла:"/>
-    <br/>
-    <br/>
-    <asp:TextBox ID="fileNameBox" runat="server" Width="500"/>
-    <br/>
-    <br/>
-    <asp:Button ID="Button1" runat="server" Text="Сохранить" OnClick="SaveClick"/>
-    <br/>
-    <br/>
-    <asp:Button ID="Button2" runat="server" Text="Назад" OnClick="BackClick"/>
+<form runat="server">
+    <asp:Button runat="server" CssClass="button" Text="Назад" OnClick="BackClick"/>
+    <div class="container">
+        <div class="form">
+            <div class="form__container">
+                <textarea ID="textarea" runat="server" readonly="readonly"/>
+                <div class="right">
+                    <div class="key">
+                        <div class="inp">
+                            <span runat="server">Введите имя директории для сохранения:</span>
+                            <input class="input" ID="filePath" runat="server" type="text"/>
+                            <span runat="server">Введите имя файла:</span>
+                            <input class="input" ID="fileName" runat="server" type="text"/>
+                        </div>
+                        <div class="btns">
+                            <asp:Button ID="Button1" runat="server" CssClass="button" Text="Сохранить" OnClick="SaveClick"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </form>
 </body>
 </html>

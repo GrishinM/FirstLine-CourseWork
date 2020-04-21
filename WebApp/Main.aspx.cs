@@ -35,13 +35,13 @@ namespace WebApp
 
         private void f()
         {
-            if (!fileUpload.HasFile && textBox.Text == "")
+            if (!fileUpload.HasFile && textarea.Value == "")
             {
                 Response.Write("<script>alert('Введите данные!');</script>");
                 return;
             }
 
-            if (keyBox.Text == "")
+            if (key.Value == "")
             {
                 Response.Write("<script>alert('Введите ключ!');</script>");
                 return;
@@ -49,7 +49,7 @@ namespace WebApp
 
             try
             {
-                encryptor.Key = keyBox.Text;
+                encryptor.Key = key.Value;
             }
             catch (MyException e)
             {
@@ -76,7 +76,7 @@ namespace WebApp
                 }
             }
             else
-                text = cryptText(textBox.Text);
+                text = cryptText(textarea.Value);
 
             Response.Redirect("Result.aspx");
         }
