@@ -7,7 +7,7 @@ namespace WebApp
 {
     public partial class Main : Page
     {
-        public static string text { get; private set; }
+        public static string Text { get; private set; }
 
         private readonly Encryptor encryptor = new Encryptor();
 
@@ -35,13 +35,15 @@ namespace WebApp
 
         private void f()
         {
-            if (!fileUpload.HasFile && textarea.Value == "")
+            var text = textBox.Value;
+            var key = keyBox.Value;
+            if (!fileUpload.HasFile && text == "")
             {
                 Response.Write("<script>alert('Введите данные!');</script>");
                 return;
             }
 
-            if (key.Value == "")
+            if (key == "")
             {
                 Response.Write("<script>alert('Введите ключ!');</script>");
                 return;
@@ -49,7 +51,7 @@ namespace WebApp
 
             try
             {
-                encryptor.Key = key.Value;
+                encryptor.Key = key;
             }
             catch (MyException e)
             {
@@ -63,7 +65,7 @@ namespace WebApp
                 fileUpload.SaveAs(fileName);
                 try
                 {
-                    text = cryptFile(fileName);
+                    Text = cryptFile(fileName);
                 }
                 catch (MyException e)
                 {
@@ -76,7 +78,7 @@ namespace WebApp
                 }
             }
             else
-                text = cryptText(textarea.Value);
+                Text = cryptText(text);
 
             Response.Redirect("Result.aspx");
         }

@@ -13,31 +13,31 @@ namespace WebApp {
     public partial class Result {
         
         /// <summary>
-        /// textarea control.
+        /// textBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify, move the field declaration from the designer file to a code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea textarea;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea textBox;
         
         /// <summary>
-        /// filePath control.
+        /// filePathBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify, move the field declaration from the designer file to a code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText filePath;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText filePathBox;
         
         /// <summary>
-        /// fileName control.
+        /// fileNameBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify, move the field declaration from the designer file to a code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText fileName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fileNameBox;
         
         /// <summary>
         /// Button1 control.

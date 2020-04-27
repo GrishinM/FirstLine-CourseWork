@@ -14,14 +14,14 @@
     <div class="container">
         <div class="form">
             <div class="form__container">
-                <textarea ID="textarea" runat="server" readonly="readonly"/>
+                <textarea ID="textBox" runat="server" readonly="readonly"/>
                 <div class="right">
                     <div class="key">
                         <div class="inp">
                             <span runat="server">Введите имя директории для сохранения:</span>
-                            <input class="input" ID="filePath" runat="server" type="text"/>
+                            <input class="input" ID="filePathBox" runat="server" type="text"/>
                             <span runat="server">Введите имя файла:</span>
-                            <input class="input" ID="fileName" runat="server" type="text"/>
+                            <input class="input" ID="fileNameBox" runat="server" type="text"/>
                         </div>
                         <div class="btns">
                             <asp:Button ID="Button1" runat="server" CssClass="button" Text="Сохранить" OnClick="SaveClick"/>

@@ -13,7 +13,7 @@
     <div class="form">
         <form runat="server">
             <div class="form__container">
-                <textarea ID="textarea" runat="server" placeholder="Введите текст..."/>
+                <textarea ID="textBox" runat="server" placeholder="Введите текст..."/>
                 <div class="right">
                     <div class="load">
                         <asp:FileUpload ID="fileUpload" runat="server" accept=".txt, .docx"/>
@@ -21,7 +21,7 @@
                     <div class="key">
                         <div class="inp">
                             <span runat="server">Введите ключ:</span>
-                            <input class="input" ID="key" runat="server" type="text"/>
+                            <input class="input" ID="keyBox" runat="server" type="text"/>
                         </div>
                         <div class="btns">
                             <asp:Button runat="server" CssClass="button" Text="Зашифровать" OnClick="EncryptClick"/>

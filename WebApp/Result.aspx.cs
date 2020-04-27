@@ -8,24 +8,26 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            textarea.Value = Main.text;
+            textBox.Value = Main.Text;
         }
 
         protected void SaveClick(Object sender, EventArgs e)
         {
-            if (!Directory.Exists(filePath.Value))
+            var filePath = filePathBox.Value;
+            var fileName = fileNameBox.Value;
+            if (!Directory.Exists(filePath))
             {
                 Response.Write("<script>alert('Директории с таким именем не существует!');</script>");
                 return;
             }
 
-            if (fileName.Value == "")
+            if (fileName == "")
             {
                 Response.Write("<script>alert('Пустое имя файла!');</script>");
                 return;
             }
 
-            File.WriteAllText($"{filePath.Value}/{fileName.Value}.txt", textarea.Value);
+            File.WriteAllText($"{filePath}/{fileName}.txt", textBox.Value);
             Response.Write("<script>alert('Успешно сохранено!');</script>");
         }
 
